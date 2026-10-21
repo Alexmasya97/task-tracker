@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoring tool</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1 class="app__title">Task tracker</h1>
+      <p class="app__subtitle">Small steps, big progress.</p>
+    </header>
+
+    <section class="progress__wrap" aria-label="Overall progress">
+      <div class="progress__head">
+        <span>Progress</span>
+        <span class="progress__value" id="value"></span>
+      </div>
+      <div class="progress">
+        <span class="progress__fill" id="progress"></span>
+      </div>
+    </section>
+
+    <ul class="list" id="list">
+    </ul>
+
+    <form class="task-form" id="form">
+      <h2>Add a task</h2>
+      <div class="field">
+        <label class="visually-hidden" for="title">Name</label>
+        <input class="field__input" id="title" name="title" type="text" placeholder="Name" autocomplete="off">
+      </div>
+
+      <div class="field">
+        <label class="visually-hidden" for="desc">Description</label>
+        <input class="field__input" id="desc" name="description" type="text" placeholder="Description"
+          autocomplete="off">
+      </div>
+
+      <button class="submit" type="submit">Add new task</button>
+    </form>
+
+
+    <modal class="modal" id="modal">
+    </modal>
+    <div class="modal-backdrop" id="backdrop"></div>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
